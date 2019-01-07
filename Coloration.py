@@ -70,10 +70,8 @@ def nbre_chromatique(D):
     if col == max_len_graphe_complet or max_len_graphe_complet == False: return "le nombre chromatique est: " + str(col)
     else: return "La coloration realiser n'est pas optimale"
 
-#{"a": 3, "b": 2}
-#x={"a": ["c"], "b": ["c","d"], "c": ["a", "b", "d"], "d": ["c", "b", "e"], "e": ["d"]}
-x=input('''{"a": ["c"], "b": ["c","d"]}
-Entrer un graph comme celui au desus: ''')
+# imput like this: {"a": ["c"], "b": ["c","d"], "c": ["a", "b", "d"], "d": ["c", "b", "e"], "e": ["d"]}
+x=input('Entrer un graph')
 G = loads(x.replace("'", '"'))
 print('Coloration trouvée:',Coloration(G))
 print(nbre_chromatique(G))
